@@ -27,7 +27,7 @@ const Home = () => {
       </div>
 
       {/* About Me Section */}
-      <div className="bg-black flex items-center justify-center p-10">
+      <div className="bg-black flex items-center justify-center p-10 mt-5 rounded-full">
         {/* Image Section */}
         <div className="relative flex justify-center mr-10">
           <img
