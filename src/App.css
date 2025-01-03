@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+/* index.css or App.css file */
+@keyframes fillBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-bar {
+  animation: fillBar 2s ease-out forwards; /* Animation duration: 2s */
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
