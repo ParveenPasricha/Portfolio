@@ -13,8 +13,17 @@ const Hire = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted");
-    setInput("")
+    if(!input.name || !input.email || !input.mobile){
+      alert("Please Fill all Field")
+    }
+    else{
+      alert("Form Submitted")
+      setInput({
+        name : '',
+        email: '',
+        mobile: ''
+      })
+    }
 
     try {
       const response = await axios.post("http://localhost:3000/api/postuser", input, {

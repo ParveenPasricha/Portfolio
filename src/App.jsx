@@ -15,10 +15,9 @@ function App() {
     <BrowserRouter>
       <Menu />
       <Routes>
-        <Route path="/" element={<ProtectedRoute />}>
-          <Route path="/project" element={<Project />} />
-          <Route path="/blog" element={<Blog />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hire" element={<Hire />} />
       </Routes>
