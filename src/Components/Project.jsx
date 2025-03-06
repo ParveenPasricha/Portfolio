@@ -4,7 +4,7 @@ const Project = () => {
   const projects = [
     {
       month: "February 2025",
-      img: "https://files.oaiusercontent.com/file-JE23ncU69A1RafVwmZyNmA?se=2025-03-06T17%3A30%3A48Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd842c398-e4ba-4a59-8c97-7e7c0cf77c66.webp&sig=MTCbr/Ws2Ce960yctFpMr/svWkEujOOlkawr6HmjoMM%3D",
+      img: "https://www.servcorp.co.uk/media/34561/e-commerce-img.jpeg",
       link: "https://tubeindia.vercel.app/"
     },
     {
