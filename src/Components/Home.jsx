@@ -1,52 +1,54 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
-      {/* Background Image Section */}
-      <div className="relative font-serif mt-6">
+    <div className="font-sans bg-gradient-to-b from-gray-900 to-black min-h-screen">
+
+
+      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <img
-          className="w-full rounded-full"
+          className="w-full h-full object-cover"
           src="https://png.pngtree.com/thumb_back/fh260/background/20201104/pngtree-technology-background-binary-computer-code-vector-design-image_458702.jpg"
           alt="Background"
         />
-        {/* Text Over Background */}
-        <div className="absolute top-0 left-0 p-8 sm:mx-44 text-white font-bold sm:text-xl lg:text-3xl">
-          Mern Stack
-        </div>
-        <h1 className="absolute top-16 left-16 text-2xl font-bold text-white lg:text-6xl lg:left-16 lg:top-28 lg:font-serif  ">
-          Parveen
-        </h1>
-        <h1 className="absolute top-24  text-center left-40 text-2xl font-bold text-white lg:top-48 lg:text-6xl lg:left-36">
-          Pasricha
-        </h1>
-        <div className="absolute top-32 left-12 text-white lg:text-5xl lg:top-80">
-          I'm a Mern Stack developer and
-          <br /> I work remotely from India
+        <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center text-white px-6">
+          <p className="text-xl lg:text-3xl font-mono tracking-widest text-purple-400">MERN STACK DEVELOPER</p>
+          <h1 className="text-5xl lg:text-7xl font-bold mt-2 animate-bounce">Parveen Pasricha</h1>
+          <p className="mt-4 text-lg lg:text-2xl font-light text-gray-300">
+            Building Scalable & Creative Web Applications 💻
+          </p>
+          <p className="mt-2 text-lg lg:text-xl">Working Remotely from India 🌏</p>
+          <Link to='/hire'
+            className="mt-6 bg-purple-600 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300"
+          >
+            Hire Me
+          </Link>
         </div>
       </div>
 
-      {/* About Me Section */}
-      <div className="bg-black flex items-center justify-center p-10 mt-5 rounded-full">
-        {/* Image Section */}
-        <div className="relative flex justify-center mr-10">
-        <img
-  className="rounded-full h-48 lg:h-72"
-  src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"
-  alt="About Me"
-/>
+
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 p-12 bg-gray-800 text-white rounded-xl shadow-2xl mt-12 mx-4 lg:mx-24">
+        
+
+        <div className="w-48 h-48 lg:w-64 lg:h-64 overflow-hidden rounded-full border-4 border-purple-400 shadow-xl">
+          <img
+            className="w-full h-full object-cover"
+            src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"
+            alt="About Me"
+          />
         </div>
 
-        {/* Text Section */}
-        <div className="text-white">
-          <label className="text-2xl lg:text-4xl font-bold mb-4">About Me</label>
-          <br />
-          <label className="text-xl lg:text-2xl">
-            I am a Web Developer, Specializing in React and MongoDB. <br />
-            My goal is to create user-friendly and innovative applications.
-          </label>
+      
+        <div className="text-center lg:text-left max-w-xl">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-purple-400">About Me</h2>
+          <p className="text-lg lg:text-xl leading-relaxed text-gray-300">
+            I’m a passionate Web Developer specializing in **React.js** and **MongoDB**. 
+            I love solving real-world problems with technology and crafting user-friendly interfaces.
+            Let’s build something amazing together! 🚀
+          </p>
         </div>
-      </div>      
+      </div>
     </div>
   );
 };
