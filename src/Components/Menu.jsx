@@ -9,20 +9,15 @@ const Menu = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  // Close menu if clicked outside
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Check if the click is outside of the menu or hamburger icon
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+           if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
     };
-
-    // Add event listener when the component mounts
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -33,6 +28,7 @@ const Menu = () => {
     <div className="flex sm:flex-row px-5 items-center bg-black sticky top-10 z-50 text-white gap-5 rounded-2xl sm:text-xl justify-between ">
       <Link to="/" className="text-start">Parveen Pasricha</Link>
       <div ref={menuRef} className="flex items-center flex-col sm:flex-row">
+      
         {/* Hamburger Menu Icon */}
         <IoMdMenu
           className="hover:text-purple-400 text-2xl lg:hidden md:hidden"

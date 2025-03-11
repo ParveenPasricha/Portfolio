@@ -4,7 +4,7 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 const Contact = () => {
   function Download() {
     const DownloadFile =
-      "https://drive.google.com/uc?export=download&id=1kFQ8A-uqqzXc6CTHKJDrZyvEsIybAJ4F";
+      "https://drive.google.com/uc?export=download&id=1PGV37P9ihQaLSiYeJHivM4iMHcMEVF0P"
     console.log(DownloadFile);
     window.location.href = DownloadFile;
   }

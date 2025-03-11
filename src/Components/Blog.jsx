@@ -1,65 +1,56 @@
 import React from "react";
-import '../App.css'
+import { motion } from "framer-motion";
+import "../App.css";
 
 function Blog() {
+  const skills = [
+    { name: "HTML", level: "80%", color: "bg-blue-600" },
+    { name: "Tailwind CSS", level: "90%", color: "bg-green-600" },
+    { name: "JavaScript", level: "80%", color: "bg-yellow-500" },
+    { name: "React", level: "90%", color: "bg-indigo-600" },
+    { name: "NodeJS", level: "80%", color: "bg-orange-600" },
+    { name: "MongoDB", level: "87%", color: "bg-emerald-600" },
+    { name: "Express", level: "85%", color: "bg-teal-600" },
+    { name: "Redux", level: "85%", color: "bg-cyan-600" },
+    { name: "Zustand", level: "90%", color: "bg-rose-600" },
+    { name: "MYSQL", level: "60%", color: "bg-purple-600" },
+    { name: "CorelDraw", level: "80%", color: "bg-pink-600" },
+    { name: "PhotoShop", level: "90%", color: "bg-red-600" },
+    { name: "Core PHP", level: "60%", color: "bg-lime-600" },
+  ];
+
   return (
-    <div className="justify-items-center">
-      <label className="text-3xl font-bold">My Skills</label>
-      <hr className="border-t-2 border-black mx-20" />
-      {/* First Section */}
-      <h1 className="py-3 text-2xl font-bold font-sans">HTML </h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div
-          className="bg-blue-600 h-full rounded-full"
-          style={{ width: "80%" }}
-        ></div>
-      </div>
-      {/* Second Section */}
-      <h1 className="py-3 text-2xl font-bold font-sans">Tailwind CSS</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-green-600 h-full rounded-full" style={{width:'90%'}}></div>
-      </div>
-      {/* Third Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">JavaScript</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-pink-500 h-full rounded-full" style={{width: '80%'}}></div>
-      </div>
+    <div className="flex flex-col items-center px-5 md:px-20 py-10">
+      <motion.h2
+        className="text-4xl font-bold mb-4 text-center"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My Skills
+      </motion.h2>
+      <hr className="border-t-2 border-black w-1/2 mb-6" />
 
-      {/* Four Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">React</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-yellow-500 h-full rounded-full" style={{width: '90%'}}></div>
-      </div>
-
-      {/* Five Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">NodeJS</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-orange-600 h-full rounded-full" style={{width: '40%'}}></div>
-      </div>
-
-      {/* Six Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">MYSQL</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-purple-600 h-full rounded-full" style={{width: '60%'}}></div>
-      </div>
-
-      {/* Seven Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">CorelDraw</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-cyan-600 h-full rounded-full" style={{width: '80%'}}></div>
-      </div>
-
-      {/* Eight Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">PhotoShop</h1>
-      <div className="bg-gray-300 h-4 rounded-full w-full max-w-lg animate-bar">
-        <div className="bg-red-600 h-full rounded-full" style={{width: '90%'}}></div>
-      </div>
-
-      {/* Nine Section */}
-      <h1 className="font-bold text-2xl font-sans py-3">Core PHP</h1>
-      <div className="bg-gray-300 h-4 w-full rounded-full max-w-lg animate-bar">
-        <div className="bg-fuchsia-600 h-full rounded-full" style={{width: '60%'}}></div>
-        </div>      
+      {skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          className="w-full max-w-lg mb-6"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold py-2">{skill.name}</h3>
+          <div className="bg-gray-300 h-4 rounded-full w-full overflow-hidden">
+            <motion.div
+              className={`${skill.color} h-full rounded-full`}
+              initial={{ width: "0%" }}
+              whileInView={{ width: skill.level }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            ></motion.div>
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 }
