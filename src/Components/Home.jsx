@@ -18,7 +18,7 @@ const Home = () => {
           <p className="mt-4 text-lg lg:text-2xl font-light text-gray-300">
             Building Scalable & Creative Web Applications 💻
           </p>
-          <p className="mt-2 text-lg lg:text-xl">Working Remotely from India 🌏</p>
+          <p className="mt-2 text-lg lg:text-xl">🌏</p>
           <Link to='/hire'
             className="mt-6 bg-purple-600 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300"
           >

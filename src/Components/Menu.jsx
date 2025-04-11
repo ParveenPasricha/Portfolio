@@ -1,50 +1,77 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { IoMdMenu } from "react-icons/io";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Ref for the menu container
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-           if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
-    // 
-    <div className="flex sm:flex-row px-5 items-center bg-black sticky top-10 z-50 text-white gap-5 rounded-2xl sm:text-xl justify-between ">
-      <Link to="/" className="text-start">Parveen Pasricha</Link>
-      <div ref={menuRef} className="flex items-center flex-col sm:flex-row">
-      
-        {/* Hamburger Menu Icon */}
-        <IoMdMenu
-          className="hover:text-purple-400 text-2xl lg:hidden md:hidden"
-          onClick={toggleMenu}
-        />
+    <header className="sticky top-5 z-50 px-5">
+      <div className="flex items-center justify-between bg-gradient-to-r from-black via-gray-900 to-black text-white rounded-2xl py-3 px-6 shadow-lg">
+        <Link to="/" className="text-2xl font-bold tracking-widest text-purple-400 hover:text-purple-600 transition-all">
+          Parveen Pasricha
+        </Link>
 
-        {/* Menu Items */}
-        <div className={`flex items-center md:flex-col sm:flex-row gap-5 sm:gap-20  ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
-          <Link to="/" className="hover:text-purple-400 lg:mr-2">Home</Link>
-          <Link to="/project" className="hover:text-purple-400 lg:mr-2">Project</Link>
-          <Link to="/blog" className="hover:text-purple-400 lg:mr-2">Blog</Link>
-          <Link to="/contact" className="hover:text-purple-400 lg:mr-2">Contact</Link>
-          <Link className="bg-purple-600 font-bold text-white rounded-lg text-xl hover:bg-green-600" to="/hire">Hire Me</Link>
-        </div>
+        {/* Hamburger Icon */}
+        <button
+          className="text-3xl md:hidden focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? <IoMdClose /> : <IoMdMenu />}
+        </button>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-8 items-center text-lg">
+          <Link to="/" className="hover:text-purple-400 transition">Home</Link>
+          <Link to="/project" className="hover:text-purple-400 transition">Project</Link>
+          <Link to="/blog" className="hover:text-purple-400 transition">Blog</Link>
+          <Link to="/contact" className="hover:text-purple-400 transition">Contact</Link>
+          <Link
+            to="/hire"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-green-500 hover:to-lime-500 text-white px-4 py-2 rounded-xl font-semibold transition"
+          >
+            Hire Me
+          </Link>
+        </nav>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          ref={menuRef}
+          className="md:hidden bg-black text-white mt-2 rounded-xl py-4 px-6 flex flex-col gap-4 shadow-md"
+        >
+          <Link to="/" className="hover:text-purple-400 transition" onClick={toggleMenu}>Home</Link>
+          <Link to="/project" className="hover:text-purple-400 transition" onClick={toggleMenu}>Project</Link>
+          <Link to="/blog" className="hover:text-purple-400 transition" onClick={toggleMenu}>Blog</Link>
+          <Link to="/contact" className="hover:text-purple-400 transition" onClick={toggleMenu}>Contact</Link>
+          <Link
+            to="/hire"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-green-500 hover:to-lime-500 text-white px-4 py-2 rounded-xl font-semibold transition text-center"
+            onClick={toggleMenu}
+          >
+            Hire Me
+          </Link>
+        </div>
+      )}
+    </header>
   );
 };
 

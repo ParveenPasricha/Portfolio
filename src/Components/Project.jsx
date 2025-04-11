@@ -3,31 +3,42 @@ import React from "react";
 const Project = () => {
   const projects = [
     {
-      month: "February 2025",
-      img: "https://www.servcorp.co.uk/media/34561/e-commerce-img.jpeg",
+      month: "March 2024 (MEGA MATCHES)",
+      img: "https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg", 
+      link: "https://mega-match.vercel.app"
+    },
+    {
+      month: "March 2024 (TESTBOOK)",
+      img: "https://img.freepik.com/free-vector/online-test-concept_52683-37445.jpg", // Online test look
+      link: "https://pro1-lovat-ten.vercel.app/"
+    },
+    {
+      month: "February 2025 (TUBE INDIA)",
+      img: "https://img.freepik.com/free-vector/e-commerce-concept-illustration_114360-8213.jpg", // E-commerce theme
       link: "https://tubeindia.vercel.app/"
     },
     {
-      month: "January 2025",
-      img: "https://strapi.dhiwise.com/uploads/how_are_ai_code_generators_revolutionizing_software_development_og_image_6530b2254b0bf_466823b8ba.webp",
+      month: "January 2025 (PORTFOLIO)",
+      img: "https://img.freepik.com/premium-vector/portfolio-concept-illustration_86047-117.jpg", // Portfolio style
       link: "https://portfolio-six-rust-35.vercel.app/"
     },
     {
       month: "January 2025",
-      img: "https://cdn.openart.ai/published/d3INU5NS5zsxtR6k11uG/1KQ5CKtE_L2DY_1024.webp",
+      img: "https://img.freepik.com/free-vector/artificial-intelligence-concept_23-2149238015.jpg", // AI/development theme
       link: "https://api-calling-sooty.vercel.app/"
     },
     {
       month: "December 2024",
-      img: "https://cdn.shopify.com/s/files/1/0070/5901/3716/files/coding_background.jpg?v=1688538955",
+      img: "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010138.jpg", // Dev/code
       link: "https://add-post-seven.vercel.app/"
     },
     {
       month: "November 2024",
-      img: "https://png.pngtree.com/thumb_back/fw800/background/20240610/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.jpg",
+      img: "https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg", // Coding + logic theme
       link: "#"
     }
   ];
+  
 
   return (
     <div className="py-10 bg-gray-50">
