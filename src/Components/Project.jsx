@@ -3,13 +3,18 @@ import React from "react";
 const Project = () => {
   const projects = [
     {
-      month: "March 2024 (MEGA MATCHES)",
+      month: "April 2025 (PP PROJECT)",
+      img: "https://img.freepik.com/free-vector/hand-drawn-college-entrance-exam-illustration_23-2150359356.jpg", //bjyus Project
+      link: "https://pp-project-demo.vercel.app"
+    },
+    {
+      month: "March 2025 (MEGA MATCHES)",
       img: "https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg", 
       link: "https://mega-match.vercel.app"
     },
     {
-      month: "March 2024 (TESTBOOK)",
-      img: "https://img.freepik.com/free-vector/online-test-concept_52683-37445.jpg", // Online test look
+      month: "March 2025 (TESTBOOK)",
+      img: "https://img.freepik.com/free-vector/online-test-concept_52683-37445.jpg", 
       link: "https://pro1-lovat-ten.vercel.app/"
     },
     {
