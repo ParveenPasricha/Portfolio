@@ -2,6 +2,11 @@ import React from "react";
 
 const Project = () => {
   const projects = [
+{
+      month: "May 2025 (SSSPL)",
+      img: "https://i.ibb.co/h1rSy3DG/Untitled.jpg
+      link: "https://ssspl.vercel.app"
+    },
     {
       month: "April 2025 (PP PROJECT)",
       img: "https://img.freepik.com/free-vector/hand-drawn-college-entrance-exam-illustration_23-2150359356.jpg", //bjyus Project
