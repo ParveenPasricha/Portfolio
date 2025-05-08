@@ -4,7 +4,7 @@ const Project = () => {
   const projects = [
 {
       month: "May 2025 (SSSPL)",
-      img: "https://i.ibb.co/h1rSy3DG/Untitled.jpg"
+      img: "https://i.ibb.co/h1rSy3DG/Untitled.jpg",
       link: "https://ssspl.vercel.app"
     },
     {
